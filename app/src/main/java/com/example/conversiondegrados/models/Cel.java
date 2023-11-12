@@ -6,10 +6,14 @@ public class Cel extends Grado {
     }
 
     public static Cel fromFar(Double farValue) {
-        return new Cel((farValue - 32) * 5 / 9, "C");
+        double celValue = (farValue - 32) * 5 / 9;
+        celValue = Double.parseDouble(decimalFormat.format(celValue));
+        return new Cel(celValue, "C");
     }
 
     public static Cel fromKel(Double kelValue) {
-        return new Cel(kelValue - 273.15, "C");
+        double celValue = kelValue - 273.15;
+        celValue = Double.parseDouble(decimalFormat.format(celValue));
+        return new Cel(celValue, "C");
     }
 }

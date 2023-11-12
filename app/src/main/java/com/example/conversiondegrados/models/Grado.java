@@ -1,8 +1,11 @@
 package com.example.conversiondegrados.models;
 
+import java.text.DecimalFormat;
+
 public class Grado {
     private Double valor;
     private String unidad;
+    static DecimalFormat decimalFormat = new DecimalFormat("#.##");
 
     public Grado(Double valor, String unidad) {
         this.valor = valor;

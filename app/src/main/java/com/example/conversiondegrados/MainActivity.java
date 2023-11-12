@@ -29,6 +29,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        kel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, FromKelvin.class);
+                startActivity(i);
+            }
+        });
 
+        far.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, FromFahrenheit.class);
+                startActivity(i);
+            }
+        });
     }
 }

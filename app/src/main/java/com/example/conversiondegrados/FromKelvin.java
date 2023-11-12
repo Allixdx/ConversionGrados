@@ -8,25 +8,25 @@ import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.conversiondegrados.models.Cel;
 import com.example.conversiondegrados.models.Far;
-import com.example.conversiondegrados.models.Kel;
 
-public class FromCelsius extends AppCompatActivity {
+public class FromKelvin extends AppCompatActivity {
 
-    private EditText valueCel;
-    private TextView valueKel;
+    private EditText valueKel;
+    private TextView valueCel;
     private TextView valueFar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_from_celsius);
+        setContentView(R.layout.activity_from_kelvin);
 
-        valueKel = findViewById(R.id.valueCel);
+        valueKel = findViewById(R.id.valueFar);
         valueFar = findViewById(R.id.valueKel);
-        valueCel = findViewById(R.id.valueFar);
+        valueCel = findViewById(R.id.valueCel);
 
-        valueCel.addTextChangedListener(new TextWatcher() {
+        valueKel.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -34,19 +34,19 @@ public class FromCelsius extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                String inputValue = valueCel.getText().toString();
+                String inputValue = valueKel.getText().toString();
 
                 if (!inputValue.isEmpty()) {
-                    Double celValue = Double.parseDouble(inputValue);
+                    Double kelValue = Double.parseDouble(inputValue);
 
-                    Far far = Far.fromCel(celValue);
-                    Kel kel = Kel.fromCel(celValue);
+                    Far far = Far.fromKel(kelValue);
+                    Cel cel = Cel.fromKel(kelValue);
 
                     valueFar.setText(String.valueOf(far.getValor())+" °F");
-                    valueKel.setText(String.valueOf(kel.getValor())+" °K");
+                    valueCel.setText(String.valueOf(cel.getValor())+" °C");
                 } else {
                     valueFar.setText("");
-                    valueKel.setText("");
+                    valueCel.setText("");
                 }
             }
 

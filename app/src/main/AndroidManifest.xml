@@ -13,6 +13,12 @@
         android:theme="@style/Theme.ConversionDeGrados"
         tools:targetApi="31">
         <activity
+            android:name=".FromFahrenheit"
+            android:exported="false" />
+        <activity
+            android:name=".FromKelvin"
+            android:exported="false" />
+        <activity
             android:name=".FromCelsius"
             android:exported="false" />
         <activity

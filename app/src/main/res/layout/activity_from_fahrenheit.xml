@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FromCelsius">
+    tools:context=".FromFahrenheit">
 
     <TextView
         android:id="@+id/titleFar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Celsius"
+        android:text="Fahrenheit"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@id/valueFar"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +31,7 @@
         android:id="@+id/keltext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fahrenheit"
+        android:text="Kelvin"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/titleFar"
         app:layout_constraintTop_toBottomOf="@id/titleFar"
@@ -50,7 +50,7 @@
         android:id="@+id/celtext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kelvin"
+        android:text="Celsius"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/titleFar"
         app:layout_constraintTop_toBottomOf="@id/keltext"

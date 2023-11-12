@@ -6,10 +6,14 @@ public class Kel extends Grado {
     }
 
     public static Kel fromCel(Double celValue) {
-        return new Kel(celValue + 273.15, "K");
+        double kelValue = celValue + 273.15;
+        kelValue = Double.parseDouble(decimalFormat.format(kelValue));
+        return new Kel(kelValue, "K");
     }
 
     public static Kel fromFar(Double farValue) {
-        return new Kel((farValue - 32) * 5 / 9 + 273.15, "K");
+        double kelValue = (farValue - 32) * 5 / 9 + 273.15;
+        kelValue = Double.parseDouble(decimalFormat.format(kelValue));
+        return new Kel(kelValue, "K");
     }
 }
