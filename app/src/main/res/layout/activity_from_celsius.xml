@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FromCelsius">
+
+    <TextView
+        android:id="@+id/titleCel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Celsius"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/valueCel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fartext"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/valueCel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/titleCel"
+        app:layout_constraintBottom_toBottomOf="@id/titleCel"/>
+
+    <TextView
+        android:id="@+id/fartext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fahrenheit"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/titleCel"
+        app:layout_constraintTop_toBottomOf="@id/titleCel"
+        app:layout_constraintBottom_toTopOf="@id/keltext"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/valueFar"
+        android:text="valor"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/fartext"
+        app:layout_constraintStart_toStartOf="@id/valueCel"/>
+
+    <TextView
+        android:id="@+id/keltext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kelvin"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/titleCel"
+        app:layout_constraintTop_toBottomOf="@id/fartext"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/valueKel"
+        android:text="valor"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/keltext"
+        app:layout_constraintStart_toStartOf="@id/valueCel"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
