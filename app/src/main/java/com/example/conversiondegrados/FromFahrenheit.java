@@ -1,6 +1,8 @@
 package com.example.conversiondegrados;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.text.Editable;
@@ -25,8 +27,6 @@ public class FromFahrenheit extends AppCompatActivity {
         valueCel=findViewById(R.id.valueCel);
         valueKel=findViewById(R.id.valueKel);
         valueFar=findViewById(R.id.valueFar);
-
-
 
         valueFar.addTextChangedListener(new TextWatcher() {
             @Override
